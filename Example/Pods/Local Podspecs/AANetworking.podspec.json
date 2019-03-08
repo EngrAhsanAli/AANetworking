@@ -1,0 +1,27 @@
+{
+  "name": "AANetworking",
+  "version": "0.1.0",
+  "summary": "A short description of AANetworking.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ahsan Ali/AANetworking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ahsan Ali": "hafiz.m.ahsan.ali@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Ahsan Ali/AANetworking.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AANetworking/Classes/**/*",
+  "dependencies": {
+    "Moya": [
+      "~> 12.0"
+    ]
+  }
+}
