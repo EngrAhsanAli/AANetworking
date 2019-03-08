@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AANetworking'
-  s.version          = '0.1.0'
+  s.version          = '1.0'
   s.summary          = 'AANetworking wraps power of Alamofire and Moya into simple Codeable format'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its 
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Ahsan Ali' => 'hafiz.m.ahsan.ali@gmail.com' }
-  s.source           = { :git => 'https://github.com/Ahsan Ali/AANetworking.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/EngrAhsanAli/AANetworking.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
