@@ -197,7 +197,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AANetworking_Example/Pods-AANetworking_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AANetworking_Example/Pods-AANetworking_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AANetworking/AANetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -214,7 +214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AANetworking_Example/Pods-AANetworking_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AANetworking_Example/Pods-AANetworking_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C57F68CCBFC4074EB28AFFC4 /* [CP] Check Pods Manifest.lock */ = {

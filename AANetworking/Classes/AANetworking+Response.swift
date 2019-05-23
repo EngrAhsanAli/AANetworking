@@ -2,7 +2,7 @@
 //  AANetworking+Response.swift
 //  AANetworking
 //
-//  Created by MacBook Pro on 08/03/2019.
+//  Created by Muhammad Ahsan Ali on 08/03/2019.
 //
 
 import Moya
@@ -28,9 +28,7 @@ extension Response {
     }
     
     private func getJsonData(_ path: String? = nil) throws -> Data {
-        
         do {
-            
             var jsonObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject
             if let path = path {
                 
@@ -46,4 +44,3 @@ extension Response {
         }
     }
 }
-

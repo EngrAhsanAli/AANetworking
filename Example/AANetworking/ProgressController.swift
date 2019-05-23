@@ -2,7 +2,7 @@
 //  ProgressController.swift
 //  AANetworking_Example
 //
-//  Created by MacBook Pro on 08/03/2019.
+//  Created by Muhammad Ahsan Ali on 08/03/2019.
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 

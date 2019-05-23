@@ -2,7 +2,7 @@
 //  AANetworking.swift
 //  AANetworking
 //
-//  Created by MacBook Pro on 08/03/2019.
+//  Created by Muhammad Ahsan Ali on 08/03/2019.
 //
 
 import Moya
@@ -16,27 +16,38 @@ extension AANetwork_Provider {
         
         return request(target as! Target) { (result) in
             
-            target.onResponse()
-            
+            var statusCode: Int
             switch result {
             case let .success(response):
+                statusCode = response.statusCode
                 do {
                     var responseData: Any
                     switch target.responseType {
-                    case .objectPath(let path):
-                        responseData = try response.mapObject(T.self, path: path)
-                    case .arrayPath(let path):
-                        responseData = try response.mapArray(T.self, path: path)
-                    case .json:
-                        responseData = try response.mapJSON()
-                    case .string:
-                        responseData = try response.mapString()
                     case .object:
                         responseData = try response.mapObject(T.self)
+                    case .objectPath(let path):
+                        responseData = try response.mapObject(T.self, path: path)
                     case .array:
-                        responseData = try response.mapObject(T.self)
+                        responseData = try response.mapArray(T.self)
+                    case .arrayPath(let path):
+                        responseData = try response.mapArray(T.self, path: path)
+                    case .map:
+                        responseData = try response.map(T.self)
+                    case .mapPath(let path):
+                        responseData = try response.map(T.self, atKeyPath: path)
+                    case .string:
+                        responseData = try response.mapString()
+                    case .stringPath(let path):
+                        responseData = try response.mapString(atKeyPath: path)
+                    case .image:
+                        responseData = try response.mapImage()
+                    case .data:
+                        responseData = response.data
+                    case .json:
+                        responseData = try response.mapJSON()
                     }
                     completion(responseData)
+                    
                 } catch {
                     completion(response)
                     print("AANetworkHelper: ", error.localizedDescription)
@@ -45,10 +56,13 @@ extension AANetwork_Provider {
                 break
                 
             case let .failure(error):
+                statusCode = error.response?.statusCode ?? error.errorCode
                 onError?(error)
                 target.onError(error: error)
                 print("AANetworkHelper: Error...\(error.localizedDescription)")
             }
+            
+            target.onResponse(statusCode: statusCode)
         }
     }
 }

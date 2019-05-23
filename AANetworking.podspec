@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AANetworking'
-  s.version          = '1.0'
+  s.version          = '1.1'
   s.summary          = 'AANetworking wraps power of Alamofire and Moya into simple Codeable format'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its a networking library written in Swift 4.2.
+AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its a networking library written in Swift 5.0.
                        DESC
 
   s.homepage         = 'https://github.com/EngrAhsanAli/AANetworking'
@@ -38,6 +38,6 @@ AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Moya', '~> 12.0'
+  s.dependency 'Moya', '~> 13.0'
   
 end
