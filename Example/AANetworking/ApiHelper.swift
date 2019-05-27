@@ -9,15 +9,21 @@
 import AANetworking
 
 enum Api {
-    case moive(String)
+    case api1, api2
 }
 
 extension Api: AANetwork_TargetType {
+    
+    var baseURL: URL {
+        return URL(string: "https://reqres.in")!
+    }
+    
     func onRequest() {
         showProgressDialog("Loading")
     }
     
-    func onResponse() {
+    func onResponse(statusCode: Int, response: Any) {
+        print(response)
         hideProgressDialog()
     }
     
@@ -27,30 +33,28 @@ extension Api: AANetwork_TargetType {
     
     var responseType: AANetwork_ResponseType {
         switch self {
-        case .moive:
+        case .api1:
             return .object
+        case .api2:
+            return .json
         }
     }
-    
-    var baseURL: URL {
-        return URL(string: "https://api.douban.com")!
-    }
-    
+
     var path: String {
         switch self {
-            
-        case let .moive(id):
-            return "v2/movie/subject/\(id)"
+        case .api1, .api2:
+            return "/api/users?page=2"
         }
     }
     
     var method: AANetwork_Method {
         switch self {
             
-        case .moive(_):
+        case .api1, .api2:
             return .get
+        default:
+            return .post
         }
-//        return .post
     }
     
     var sampleData: Data {
@@ -59,7 +63,6 @@ extension Api: AANetwork_TargetType {
     
     var task: AANetwork_Task {
         switch self {
-            
         default:
             return .requestPlain
         }
@@ -70,49 +73,4 @@ extension Api: AANetwork_TargetType {
     }
     
     
-}
-
-struct Movie: Codable {
-    
-    var rating: Rating
-    var images: Images
-    
-    var reviews_count: Int
-    var wish_count: Int
-    var year: String
-    var summary: String
-    var comments_count: Int
-    var ratings_count: Int
-    var collect_count: Int
-    
-    var countries: [String]
-    var genres: [String]
-    var aka: [String]
-    
-    var casts: [Person]
-    var directors: [Person]
-}
-
-struct Rating: Codable {
-    
-    var max: Float
-    var min: Float
-    var average: Float
-    var stars: String
-}
-
-struct Images: Codable {
-    
-    var small: String
-    var large: String
-    var medium: String
-}
-
-struct Person: Codable {
-    
-    var alt: String
-    var name: String
-    var id: String
-    
-    var avatars: Images
 }

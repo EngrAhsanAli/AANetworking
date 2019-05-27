@@ -15,6 +15,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		D901048A2CCE9472434BEC14 /* Pods_AANetworking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FEE09A6437C6CB2827349D /* Pods_AANetworking_Example.framework */; };
+		FA66F08B229C89A40004C368 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66F08A229C89A40004C368 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A1252F18F9192BAC791A7E12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C7FEE09A6437C6CB2827349D /* Pods_AANetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AANetworking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA420AF3C14B751549B19ED /* AANetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AANetworking.podspec; path = ../AANetworking.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FA66F08A229C89A40004C368 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				5269E28622324D9D009E96FC /* ProgressController.swift */,
 				5269E28822324DCF009E96FC /* ApiHelper.swift */,
+				FA66F08A229C89A40004C368 /* Models.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -162,6 +165,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -250,6 +254,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				5269E28722324D9D009E96FC /* ProgressController.swift in Sources */,
+				FA66F08B229C89A40004C368 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

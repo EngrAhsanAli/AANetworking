@@ -17,41 +17,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         viewController = self
         // Do any additional setup after loading the view, typically from a nib.
-        test1()
     }
     
-    open func test1() {
-        
-        ApiProvider.request(Api.moive("1764796"), type: Movie.self, completion: { response in
-            
-            let responseObject = response as! Movie
+    @IBAction func getRequestAction(_ sender: Any) {
+        ApiProvider.aa_request(Api.api2, completion: { (response) in
             print("Success...\(response)")
-            print(responseObject)
-            
         })
-        
     }
     
-    open func test2() {
-        
-        ApiProvider.request(.moive("1764796")) { (result) in
-            
-            switch result {
-                
-            case let .success(response):
-                
-                do {
-                    
-                    let success = try response
-                        .mapArray(Person.self, path: "directors")
-                    print("Success...\(success)")
-                } catch {
-                    print(error)
-                }
-            case let .failure(error):
-                print("Error...\(error)")
-            }
-        }
+
+    // Codable
+    @IBAction func getRequest2Action(_ sender: Any) {
+        ApiProvider.aa_request(Api.api1, type: Model1.self, completion: { response in
+            let responseObject = response as! Model1
+            print("Success...\(response)")
+            print(responseObject.totalPages)
+            print(responseObject)
+        })
+    }
+    
+    @IBAction func postRequestAction(_ sender: Any) {
+        // TODO:-
+    }
+    
+    // Codable
+    @IBAction func postRequest2Action(_ sender: Any) {
+        // TODO:-
+
     }
     
 }
