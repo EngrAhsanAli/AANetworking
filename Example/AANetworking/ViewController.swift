@@ -74,24 +74,3 @@ class ViewController: UIViewController {
     }
     
 }
-
-var progressController: ProgressController?
-var viewController: ViewController!
-
-func showProgressDialog(_ loadingMessage: String) {
-    let progress = ProgressController(title: loadingMessage, theme: .dark)
-    [progress].forEach(viewController.view.addSubview(_:))
-    progressController = progress
-}
-
-func hideProgressDialog() {
-    progressController?.hide()
-}
-
-func showProblem(_ message: String) {
-    let alert = UIAlertController(title: "Something Went Wrong", message: message, preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-        
-    }))
-    viewController.present(alert, animated: true, completion: nil)
-}

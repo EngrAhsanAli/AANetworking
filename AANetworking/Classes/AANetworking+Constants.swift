@@ -8,6 +8,7 @@
 import Moya
 
 
+/// AANetwork alias
 public typealias AANetwork_Method = Moya.Method
 public typealias AANetwork_Task = Task
 public typealias AANetwork_Provider = MoyaProvider
@@ -19,8 +20,6 @@ public typealias AANetwork_Parameters = [String: Any]
 public typealias AANetwork_LoggerPlugin = NetworkLoggerPlugin
 public typealias AANetwork_CompletionResponse = ((Any) -> ())
 public typealias AANetwork_CompletionError = ((AANetwork_Error) -> ())
-
-
 
 public enum AANetwork_ResponseType {
     case object, objectPath(path: String?)

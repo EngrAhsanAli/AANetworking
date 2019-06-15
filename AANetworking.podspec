@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AANetworking'
-  s.version          = '1.2'
+  s.version          = '1.3'
   s.summary          = 'AANetworking wraps power of Alamofire and Moya into simple Codeable format'
 
 # This description is used to generate tags and improve search results.
