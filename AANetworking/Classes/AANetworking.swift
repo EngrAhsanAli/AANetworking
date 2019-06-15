@@ -11,7 +11,7 @@ extension AANetwork_Provider {
     
     @discardableResult
     open func aa_request<T: Codable>(_ target: AANetwork_TargetType,
-                                  type: T.Type, completion: AANetwork_CompletionResponse? = nil,
+                                  type: T.Type, completion: AANetwork_CompletionResponse?,
                                   onError: AANetwork_CompletionError? = nil) -> AANetwork_Cancellable {
         
         target.onRequest()
@@ -27,21 +27,17 @@ extension AANetwork_Provider {
                 do {
                     switch target.responseType {
                     case .object:
-                        responseData = try response.mapObject(T.self)
+                        responseData = try response.map(T.self, failsOnEmptyData: false)
                     case .objectPath(let path):
-                        responseData = try response.mapObject(T.self, path: path)
+                        responseData = try response.map(T.self, atKeyPath: path, failsOnEmptyData: false)
                     case .array:
-                        responseData = try response.mapArray(T.self)
+                        responseData = try response.map([T].self, failsOnEmptyData: false)
                     case .arrayPath(let path):
-                        responseData = try response.mapArray(T.self, path: path)
-                    case .map:
-                        responseData = try response.map(T.self)
-                    case .mapPath(let path):
-                        responseData = try response.map(T.self, atKeyPath: path)
-                    case let .mapJSONDecoderPath(d, p):
-                        responseData = try response.map(T.self, atKeyPath: p, using: d, failsOnEmptyData: false)
+                        responseData = try response.map([T].self, atKeyPath: path, failsOnEmptyData: false)
                     case let .mapJSONDecoder(d):
                         responseData = try response.map(T.self, atKeyPath: nil, using: d, failsOnEmptyData: false)
+                    case let .mapJSONDecoderPath(d, p):
+                        responseData = try response.map(T.self, atKeyPath: p, using: d, failsOnEmptyData: false)
                     default:
                         responseData = response.data
                     }
@@ -64,7 +60,7 @@ extension AANetwork_Provider {
     
     @discardableResult
     open func aa_request(_ target: AANetwork_TargetType,
-                     completion: AANetwork_CompletionResponse? = nil,
+                     completion: AANetwork_CompletionResponse?,
                      onError: AANetwork_CompletionError? = nil) -> AANetwork_Cancellable {
         
         target.onRequest()

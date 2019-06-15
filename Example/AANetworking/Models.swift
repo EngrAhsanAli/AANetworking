@@ -12,7 +12,7 @@ import Foundation
 // https://reqres.in/
 
 
-// MARK: - Welcome
+// MARK: - Model1
 struct Model1: Codable {
     let page, perPage, total: Int
     let totalPages: Int?
@@ -26,3 +26,27 @@ struct Model1: Codable {
 }
 
 
+// MARK: - Model2
+struct Model2: Codable {
+    let pantoneValue: String
+    let id: Int
+    let name: String
+    let year: Int
+    let color: String
+    
+    enum CodingKeys: String, CodingKey {
+        case pantoneValue = "pantone_value"
+        case id, name, year, color
+    }
+}
+
+
+// MARK: - Model3
+struct Model3: Codable {
+    let email, password: String
+    
+    init(email: String, password: String) {
+        self.email = email
+        self.password = password
+    }
+}

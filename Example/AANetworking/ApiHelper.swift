@@ -7,9 +7,10 @@
 //
 
 import AANetworking
+import Alamofire
 
 enum Api {
-    case api1, api2
+    case api1, api2, api3, api4, api5(AANetwork_Parameters), api6(Codable)
 }
 
 extension Api: AANetwork_TargetType {
@@ -37,12 +38,22 @@ extension Api: AANetwork_TargetType {
             return .object
         case .api2:
             return .json
+        case .api3:
+            return .arrayPath(path: "data")
+        case .api4:
+            return .string
+        case .api5:
+            return .stringPath(path: "token")
+        case .api6:
+            return .string
         }
     }
 
     var path: String {
         switch self {
-        case .api1, .api2:
+        case .api5, .api6:
+            return "/api/login"
+        default:
             return "/api/users?page=2"
         }
     }
@@ -50,10 +61,10 @@ extension Api: AANetwork_TargetType {
     var method: AANetwork_Method {
         switch self {
             
-        case .api1, .api2:
-            return .get
-        default:
+        case .api5:
             return .post
+        default:
+            return .get
         }
     }
     
@@ -63,6 +74,10 @@ extension Api: AANetwork_TargetType {
     
     var task: AANetwork_Task {
         switch self {
+        case let .api5(params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case let .api6(params):
+            return .requestJSONEncodable(params)
         default:
             return .requestPlain
         }

@@ -11,7 +11,7 @@ import AANetworking
 
 class ViewController: UIViewController {
     
-    let ApiProvider = AANetwork_Provider<Api>()
+    let ApiProvider = AANetwork_Provider<Api>(plugins: [AANetwork_LoggerPlugin(verbose: true, responseDataFormatter: AAResponseJSONFormatter)])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +31,45 @@ class ViewController: UIViewController {
         ApiProvider.aa_request(Api.api1, type: Model1.self, completion: { response in
             let responseObject = response as! Model1
             print("Success...\(response)")
-            print(responseObject.totalPages)
+            print(responseObject.totalPages ?? 0)
             print(responseObject)
         })
     }
     
+    // Array Codeable
+    @IBAction func getRequest3Action(_ sender: Any) {
+        ApiProvider.aa_request(Api.api3, type: Model2.self, completion: { response in
+            let responseObject = response as! [Model2]
+            print("Success...\(response)")
+            print(responseObject.count)
+            print(responseObject)
+        })
+    }
+    
+    // String
+    @IBAction func getRequest4Action(_ sender: Any) {
+        ApiProvider.aa_request(Api.api4, completion: { response in
+            print("Success...\(response)")
+        })
+    }
+    
+    // Post and String Path
     @IBAction func postRequestAction(_ sender: Any) {
-        // TODO:-
+        let params: [String : Any] = [
+            "email": "eve.holt@reqres.in",
+            "password": "cityslicka"
+        ]
+        ApiProvider.aa_request(Api.api5(params), completion: { response in
+            print("Success...\(response)")
+        })
     }
     
     // Codable
     @IBAction func postRequest2Action(_ sender: Any) {
-        // TODO:-
+        let model = Model3(email: "eve.holt@reqres.in", password: "cityslicka")
+        ApiProvider.aa_request(Api.api6(model), completion: { response in
+            print("Success...\(response)")
+        })
 
     }
     
