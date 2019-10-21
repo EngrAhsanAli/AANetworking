@@ -34,7 +34,7 @@ class ProgressController: UIVisualEffectView {
         
         if let superview = self.superview {
             frame = CGRect(x: superview.frame.midX - strLabel.frame.width / 2,
-                           y: superview.frame.midY - strLabel.frame.height / 2, width: 160, height: 46)
+                           y: superview.frame.midY - strLabel.frame.height / 2, width: 220, height: 50)
             
             layer.cornerRadius = 15.0
             layer.masksToBounds = true
@@ -43,7 +43,9 @@ class ProgressController: UIVisualEffectView {
             activityIndicator.startAnimating()
             
             strLabel.text = title
+            strLabel.numberOfLines = 0
             strLabel.font = .systemFont(ofSize: 14, weight: UIFont.Weight.medium)
+            strLabel.sizeToFit()
             
             switch theme {
             case .dark:

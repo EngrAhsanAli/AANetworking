@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NoB-tG-Mcl">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AANetworking Demo-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AANetworking_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,46 +20,58 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jox-lv-AWj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="523"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arF-Wb-Mjp">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
-                                        <state key="normal" title="Get Request"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                        <state key="normal" title="Get Request">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="getRequestAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sUt-yq-hpC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds5-MT-LlU">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="107.5"/>
-                                        <state key="normal" title="Get Request (Codeable)"/>
+                                        <rect key="frame" x="0.0" y="87" width="375" height="87.5"/>
+                                        <state key="normal" title="Get Request (Codable)">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="getRequest2Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ITR-bk-UYM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhJ-bo-K4x">
-                                        <rect key="frame" x="0.0" y="215.5" width="375" height="108"/>
-                                        <state key="normal" title="Get Request (Array Codeable)"/>
+                                        <rect key="frame" x="0.0" y="174.5" width="375" height="87"/>
+                                        <state key="normal" title="Get Request (Array Codable)">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="getRequest3Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="38V-du-myI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVw-dm-oPm">
-                                        <rect key="frame" x="0.0" y="323.5" width="375" height="108"/>
-                                        <state key="normal" title="Get Request (String)"/>
+                                        <rect key="frame" x="0.0" y="261.5" width="375" height="87"/>
+                                        <state key="normal" title="Get Request (String)">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="getRequest4Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0UQ-sB-Gvt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-hF-Kzh">
-                                        <rect key="frame" x="0.0" y="431.5" width="375" height="107.5"/>
-                                        <state key="normal" title="Post Request"/>
+                                        <rect key="frame" x="0.0" y="348.5" width="375" height="87.5"/>
+                                        <state key="normal" title="Post Request">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="postRequestAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6Uc-WL-xfZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjH-cr-qBJ">
-                                        <rect key="frame" x="0.0" y="539" width="375" height="108"/>
-                                        <state key="normal" title="Post Request (Codeable)"/>
+                                        <rect key="frame" x="0.0" y="436" width="375" height="87"/>
+                                        <state key="normal" title="Post Request (Codable)">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="postRequest2Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7QY-gd-zop"/>
                                         </connections>
@@ -69,16 +79,39 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Jox-lv-AWj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="2DC-dZ-AST"/>
+                            <constraint firstItem="Jox-lv-AWj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="2DC-dZ-AST"/>
                             <constraint firstAttribute="trailing" secondItem="Jox-lv-AWj" secondAttribute="trailing" id="3Cj-Zx-efs"/>
                             <constraint firstItem="Jox-lv-AWj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="rOX-X7-D5o"/>
-                            <constraint firstItem="Jox-lv-AWj" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="yRL-wP-LcI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Jox-lv-AWj" secondAttribute="bottom" constant="50" id="yRL-wP-LcI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="AANetworking Demo" id="Euu-Da-zVO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mVv-sU-Qw6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NoB-tG-Mcl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ji7-Sq-CN7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="FDK-kj-4or"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k78-xl-bsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>

@@ -20,7 +20,7 @@ extension Api: AANetwork_TargetType {
     }
     
     func onRequest() {
-        showProgressDialog("Loading")
+        showProgressDialog("Fetching data from network, please wait 🇵🇰")
     }
     
     func onResponse(statusCode: Int, response: Any) {
