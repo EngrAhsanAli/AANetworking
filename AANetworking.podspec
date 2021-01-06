@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AANetworking'
-  s.version          = '1.3'
+  s.version          = '1.4'
   s.summary          = 'AANetworking wraps power of Alamofire and Moya into simple Codeable format'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its 
   s.source           = { :git => 'https://github.com/EngrAhsanAli/AANetworking.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'AANetworking/Classes/**/*'
   
@@ -38,6 +38,6 @@ AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Moya', '~> 13.0'
+  s.dependency 'Moya', '~> 14.0'
   
 end

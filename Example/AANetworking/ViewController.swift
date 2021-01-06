@@ -11,7 +11,7 @@ import AANetworking
 
 class ViewController: UIViewController {
     
-    let ApiProvider = AANetwork_Provider<Api>(plugins: [AANetwork_LoggerPlugin(verbose: true, responseDataFormatter: AAResponseJSONFormatter)])
+    let ApiProvider = AANetwork_Provider<Api>(plugins: [AANetwork_LoggerPlugin()])
 
     override func viewDidLoad() {
         super.viewDidLoad()

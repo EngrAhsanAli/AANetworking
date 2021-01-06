@@ -1,8 +1,8 @@
 {
   "name": "AANetworking",
-  "version": "1.0",
+  "version": "1.3",
   "summary": "AANetworking wraps power of Alamofire and Moya into simple Codeable format",
-  "description": "AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its a networking library written in Swift 4.2.",
+  "description": "AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its a networking library written in Swift 5.0.",
   "homepage": "https://github.com/EngrAhsanAli/AANetworking",
   "license": {
     "type": "MIT",
@@ -13,15 +13,15 @@
   },
   "source": {
     "git": "https://github.com/EngrAhsanAli/AANetworking.git",
-    "tag": "1.0"
+    "tag": "1.3"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "AANetworking/Classes/**/*",
   "dependencies": {
     "Moya": [
-      "~> 13.0"
+      "~> 14.0"
     ]
   }
 }

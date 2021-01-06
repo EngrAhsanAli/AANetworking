@@ -1,33 +1,29 @@
 PODS:
-  - AANetworking (1.0):
-    - Moya (~> 13.0)
-  - Alamofire (4.8.2)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - Result (4.1.0)
+  - AANetworking (1.3):
+    - Moya (~> 14.0)
+  - Alamofire (5.4.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
 
 DEPENDENCIES:
   - AANetworking (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Moya
-    - Result
 
 EXTERNAL SOURCES:
   AANetworking:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AANetworking: aa3dc176a04effd47626818acbfaab50fb63d5c0
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  AANetworking: 6e1866519ab7c658d8474bc4236bc6bef82243ce
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
 
 PODFILE CHECKSUM: ac70b8ca39eb62e660753672624370b7af9b3066
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.10.0

@@ -48,7 +48,7 @@ extension AANetwork_Provider {
                 
             case let .failure(error):
                 statusCode = error.response?.statusCode ?? error.errorCode
-                responseData = result.value?.data ?? error
+                responseData = error.response?.data ?? error
                 onError?(error)
                 target.onError(error: error)
                 print("AANetworkHelper: Error...\(error.localizedDescription)")
@@ -96,7 +96,7 @@ extension AANetwork_Provider {
                 
             case let .failure(error):
                 statusCode = error.response?.statusCode ?? error.errorCode
-                responseData = result.value?.data ?? error
+                responseData = error.response?.data ?? error
                 onError?(error)
                 target.onError(error: error)
                 print("AANetworkHelper: Error...\(error.localizedDescription)")
