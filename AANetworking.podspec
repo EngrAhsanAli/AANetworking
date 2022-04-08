@@ -38,6 +38,6 @@ AANetworking wraps power of Alamofire and Moya into simple Codeable format. Its 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Moya', '~> 14.0'
+  s.dependency 'Moya', '~> 15.0'
   
 end
